@@ -8,16 +8,24 @@ import {
   Legend,
   CartesianGrid,
 } from "recharts";
+import useDashboardData from "@/components/hooks/useDashboardData";
 import type { MonthlyRecord } from "../types/dashboard";
 import { currency } from "../utils/format";
+import FilterBar from "./Filterbar";
+import { useFilters } from "./context/FilterContext";
 
 interface LinesChartProps {
   current: MonthlyRecord[]; // [{ month, revenue, expenses, profit }]
 }
 
 export default function LinesChart({ current }: LinesChartProps) {
+  const { range } = useFilters();
+  const { currentMonthly } =useDashboardData(range);
   return (
     <div className="rounded-2xl border bg-white p-4 shadow-sm w-full h-full">
+      
+          <FilterBar csvData={currentMonthly} />
+      
       <h2 className="text-lg font-semibold mb-3">Performance Trend</h2>
 
       <ResponsiveContainer width="100%" height="90%">

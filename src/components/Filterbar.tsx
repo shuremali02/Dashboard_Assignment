@@ -24,7 +24,7 @@ export default function FilterBar({ csvData }: FilterBarProps) {
         <div>
           <label className="text-xs text-gray-500">Filter</label>
           <Select value={filter} onValueChange={(v) => setFilter(v as typeof filter)}>
-            <SelectTrigger className="w-[160px]">
+            <SelectTrigger className="w-[160px] ">
               <SelectValue placeholder="Select filter" />
             </SelectTrigger>
             <SelectContent>
@@ -43,13 +43,13 @@ export default function FilterBar({ csvData }: FilterBarProps) {
               type="date"
               className="border rounded-lg px-3 py-2"
               value={custom.start || ""}
-              onChange={(e) => setCustom((c) => ({ ...c, start: e.target.value }))}
+              onChange={(e) => setCustom((c: any) => ({ ...c, start: e.target.value }))}
             />
             <input
               type="date"
               className="border rounded-lg px-3 py-2"
               value={custom.end || ""}
-              onChange={(e) => setCustom((c) => ({ ...c, end: e.target.value }))}
+              onChange={(e) => setCustom((c: any) => ({ ...c, end: e.target.value }))}
             />
           </>
         )}

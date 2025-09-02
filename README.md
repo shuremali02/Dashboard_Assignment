@@ -1,69 +1,85 @@
-# React + TypeScript + Vite
+# 📊 Dashboard App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive dashboard application built with **React**, **Tailwind CSS**, and **Context API**.  
+It includes a sidebar with navigation between pages (Dashboard, Revenue, Expenses, Profit) and works on both desktop and mobile with a toggle sidebar.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Responsive sidebar (desktop fixed, mobile toggle with overlay)
+- Pages:
+  - Dashboard (default)
+  - Revenue
+  - Expenses
+  - Profit
+- Context API for filter state management
+- Built with Tailwind CSS for styling
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Context API](https://reactjs.org/docs/context.html)
+- [Vite](https://vitejs.dev/) (for development & build)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+2. Install Dependencies
+npm install
+3. Run the Development Server
+npm run dev
+Your app will be running at:
+👉 http://localhost:5173
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🔨 Build for Production
+
+npm run build
+📂 Project Structure
+css
+
+src/
+  app/
+    App.jsx
+  components/
+    Sidebar.jsx
+    Header.jsx
+    FilterBar.jsx
+    StatCard.jsx
+    PerformanceBanner.jsx
+    LinesChart.jsx
+  context/
+    FilterContext.jsx
+  hooks/
+    useDashboardData.js
+  lib/
+    data.js
+  utils/
+    filters.js
+    format.js
+    csv.js
+  pages/
+    Dashboard.jsx
+    Revenue.tsx
+    Profit.tsx
+    Expenses.tsx
+  index.css
+  main.jsx
+✅ Notes
+Make sure you have Node.js (>=16) installed.
+
+After cloning, simply run:
+
+
+npm install
+npm run dev
+The app will be ready to use 🎉
+
