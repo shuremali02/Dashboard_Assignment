@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Sidebar from "@/components/Sidebar";
-import Header from "@/components/Header";
-import MainContent from "@/components/MainContent";
-import { FilterProvider } from "@/components/context/FilterContext";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import MainContent from "./components/MainContent";
+import { FilterProvider } from "./components/context/FilterContext";
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
