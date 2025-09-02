@@ -1,7 +1,7 @@
-import Dashboard from "@/pages/Dashboard";
-import Expenses from "@/pages/Expenses";
-import Revenue from "@/pages/Revenue";
-import Profit from "@/pages/Profit";
+import Dashboard from "../pages/Dashboard";
+import Expenses from "../pages/Expenses";
+import Revenue from "../pages/Revenue";
+import Profit from "../pages/Profit";
 
 interface MainContentProps {
   selectedPage: string;

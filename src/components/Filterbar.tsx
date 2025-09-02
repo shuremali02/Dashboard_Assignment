@@ -1,14 +1,14 @@
-import { useFilters } from "@/components/context/FilterContext";
-import { FILTERS } from "@/utils/filters";
-import { downloadCSV } from "@/utils/csv";
-import { Button } from "@/components/ui/button";
+import { useFilters } from "./context/FilterContext";
+import { FILTERS } from "../utils/filters";
+import { downloadCSV } from "../utils/csv";
+import { Button } from "./ui/button";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "./ui/select";
 
 interface FilterBarProps {
   csvData: any[];

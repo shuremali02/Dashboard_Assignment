@@ -1,4 +1,4 @@
-import { addDays, eachDayOfInterval, endOfYear, formatISO, startOfYear } from "date-fns";
+import {  eachDayOfInterval, endOfYear, formatISO, startOfYear } from "date-fns";
 import type { DailyRecord } from "../types/dashboard";
 
 function makeYearDaily(year: number, seed = 42): DailyRecord[] {

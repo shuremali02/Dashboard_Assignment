@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Menu, Bell, Search, User } from "lucide-react";
+import { Button } from "./ui/button";
+import {  Bell, Search, User } from "lucide-react";
 
 interface HeaderProps {
   onMenuClick?: () => void;

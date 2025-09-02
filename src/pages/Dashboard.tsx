@@ -1,13 +1,12 @@
-import { useFilters } from "@/components/context/FilterContext";
-import useDashboardData from "@/components/hooks/useDashboardData";
-import FilterBar from "@/components/Filterbar";
-import StatCard from "@/components/StatCard";
-import LinesChart from "@/components/LinesChart";
+import { useFilters } from "../components/context/FilterContext";
+import useDashboardData from "../components/hooks/useDashboardData";
+import StatCard from "../components/StatCard";
+import LinesChart from "../components/LinesChart";
 import { BarChart3 } from "lucide-react";
 
 export default function Dashboard() {
   const { range } = useFilters();
-  const { currentMonthly, lastMonthly, years, kpiNow, kpiPrev } =
+  const { currentMonthly,  kpiNow, kpiPrev } =
     useDashboardData(range);
 
   return (

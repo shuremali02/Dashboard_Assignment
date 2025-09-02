@@ -8,7 +8,7 @@ import {
   Legend,
   CartesianGrid,
 } from "recharts";
-import useDashboardData from "@/components/hooks/useDashboardData";
+import useDashboardData from "./hooks/useDashboardData";
 import type { MonthlyRecord } from "../types/dashboard";
 import { currency } from "../utils/format";
 import FilterBar from "./Filterbar";

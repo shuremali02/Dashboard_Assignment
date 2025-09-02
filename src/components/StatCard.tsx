@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent,  } from "./ui/card";
 import { currency } from "../utils/format";
-import { TrendingUp, TrendingDown, DollarSign, BarChart3 } from "lucide-react";
+import { TrendingUp, DollarSign, BarChart3 } from "lucide-react";
 
 interface StatCardProps {
   label: string;

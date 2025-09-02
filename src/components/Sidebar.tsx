@@ -1,9 +1,8 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import { 
   BarChart3, 
   TrendingUp, 
   DollarSign, 
-  PieChart,
   Home
 } from "lucide-react";
 
