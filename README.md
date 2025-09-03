@@ -48,31 +48,32 @@ css
 
 src/
   app/
-    App.jsx
+    App.tsx
   components/
-    Sidebar.jsx
-    Header.jsx
-    FilterBar.jsx
-    StatCard.jsx
-    PerformanceBanner.jsx
-    LinesChart.jsx
+    Sidebar.tsx
+    Header.tsx
+    FilterBar.tsx
+    StatCard.tsx
+    PerformanceBanner.tsx
+    NotificationPerformance.tsx 
+    LinesChart.tsx
   context/
-    FilterContext.jsx
+    FilterContext.tsx
   hooks/
-    useDashboardData.js
+    useDashboardData.ts
   lib/
-    data.js
+    data.ts
   utils/
-    filters.js
-    format.js
-    csv.js
+    filters.ts
+    format.ts
+    csv.ts
   pages/
-    Dashboard.jsx
+    Dashboard.tsx
     Revenue.tsx
     Profit.tsx
     Expenses.tsx
   index.css
-  main.jsx
+  main.tsx
 ✅ Notes
 Make sure you have Node.js (>=16) installed.
 
