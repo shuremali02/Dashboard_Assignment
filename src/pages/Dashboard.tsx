@@ -3,11 +3,11 @@ import useDashboardData from "../components/hooks/useDashboardData";
 import StatCard from "../components/StatCard";
 import LinesChart from "../components/LinesChart";
 import { BarChart3 } from "lucide-react";
+import PerformanceNotification from "../components/NotificationPerformance";
 
 export default function Dashboard() {
   const { range } = useFilters();
-  const { currentMonthly,  kpiNow, kpiPrev } =
-    useDashboardData(range);
+  const { currentMonthly, kpiNow, kpiPrev } = useDashboardData(range);
 
   return (
     <div className="space-y-6">
@@ -19,16 +19,21 @@ export default function Dashboard() {
           </div>
           <div>
             <h2 className="text-2xl font-semibold text-gray-900">Dashboard</h2>
-            <p className="text-gray-600">Overview of your business performance</p>
+            <p className="text-gray-600">
+              Overview of your business performance
+            </p>
           </div>
         </div>
       </div>
 
       {/* KPI Cards with Filter */}
       <div className="space-y-6">
-        {/* Filter bar - compact size */}
-        
-        
+        {/* ✅ Performance Notification */}
+        <PerformanceNotification
+          profitThisYear={kpiNow.profit}
+          profitLastYear={kpiPrev.profit}
+        />
+
         {/* KPI Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <StatCard

@@ -38,21 +38,32 @@ export default function FilterBar({ csvData }: FilterBarProps) {
         </div>
 
         {filter === FILTERS.CUSTOM && (
-          <>
-            <input
-              type="date"
-              className="border rounded-lg px-3 py-2"
-              value={custom.start || ""}
-              onChange={(e) => setCustom((c: any) => ({ ...c, start: e.target.value }))}
-            />
-            <input
-              type="date"
-              className="border rounded-lg px-3 py-2"
-              value={custom.end || ""}
-              onChange={(e) => setCustom((c: any) => ({ ...c, end: e.target.value }))}
-            />
-          </>
-        )}
+  <div className="flex flex-col gap-2">
+    <label className="text-xs text-gray-500">Custom Range</label>
+
+    {/* Responsive Grid: Mobile => 1 column, md+ => 2 columns */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <input
+        type="date"
+        className="border rounded-lg px-3 py-2"
+        value={custom.start || ""}
+        onChange={(e) =>
+          setCustom((c: any) => ({ ...c, start: e.target.value }))
+        }
+      />
+      <input
+        type="date"
+        className="border rounded-lg px-3 py-2"
+        value={custom.end || ""}
+        onChange={(e) =>
+          setCustom((c: any) => ({ ...c, end: e.target.value }))
+        }
+      />
+    </div>
+  </div>
+)}
+
+
       </div>
 
       {/* Right */}
